@@ -12,14 +12,14 @@ jobs:
   name: deply to DockerHub
   runs-on: ubuntu-latest
   steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
+  - name: Checkout code
+    uses: actions/checkout@v3
 
-    - name: Build and push Docker image
-      uses: docker/build-push-action@v1
-      with:
-        username: ${{ secrets.DOCKER_USERNAME }}
-        password: ${{ secrets.DOCKER_PASSWORD }}
-        repository: kerloy/testrep
-        dockerfile: Dockerfile
-        tags: latest
+  - name: Build and push Docker image
+    uses: docker/build-push-action@v1
+    with:
+      username: ${{ secrets.DOCKER_USERNAME }}
+      password: ${{ secrets.DOCKER_PASSWORD }}
+      repository: kerloy/testrep
+      dockerfile: Dockerfile
+      tags: latest
