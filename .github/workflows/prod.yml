@@ -9,7 +9,7 @@ on:
       - master
 jobs:
   build-and-deploy
-  name:deply to DockerHub
+  name: deply to DockerHub
   runs-on: ubuntu-latest
   steps:
   steps:
